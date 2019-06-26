@@ -1,0 +1,110 @@
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"
+        integrity="sha256-xNjb53/rY+WmG+4L6tTl9m6PpqknWZvRt0rO1SRnJzw=" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="js/HtmlGenerator.js"></script>
+
+    <script src="js/MadPaginationModule.js" type="text/javascript"></script>
+    <script src="js/MadSearchModule.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <h2>Hello World</h2>
+
+        <input type="text" id="search" placeholder="search" />
+
+        <div class="row">
+            <div class="box col-6 mx-auto">
+                <ul id="list">
+                    <li>Item A</li>
+                    <li>Item B</li>
+                    <li>Item C</li>
+                    <li>Item D</li>
+                    <li>Item E</li>
+                    <li>Item F</li>
+                    <li>Item G</li>
+                    <li>Item H</li>
+                    <li>Item I</li>
+                    <li>Item J</li>
+                    <li>Item K</li>
+                    <li>Item L</li>
+                    <li>Item M</li>
+                    <li>Item N</li>
+                    <li>Item O</li>
+                    <li>Item P</li>
+                    <li>Item Q</li>
+                    <li>Item R</li>
+                    <li>Item S</li>
+                    <li>Item T</li>
+                    <li>Item U</li>
+                    <li>Item V</li>
+                    <li>Item W</li>
+                    <li>Item X</li>
+                    <li>Item Y</li>
+                    <li>Item Z</li>
+                    <li>Item A</li>
+                    <li>Item B</li>
+                    <li>Item C</li>
+                    <li>Item D</li>
+                    <li>Item E</li>
+                    <li>Item F</li>
+                    <li>Item G</li>
+                    <li>Item H</li>
+                    <li>Item I</li>
+                    <li>Item J</li>
+                    <li>Item K</li>
+                    <li>Item L</li>
+                    <li>Item M</li>
+                    <li>Item N</li>
+                    <li>Item O</li>
+                    <li>Item P</li>
+                    <li>Item Q</li>
+                    <li>Item R</li>
+                    <li>Item S</li>
+                    <li>Item T</li>
+                    <li>Item U</li>
+                    <li>Item V</li>
+                    <li>Item W</li>
+                    <li>Item X</li>
+                    <li>Item Y</li>
+                    <li>Item Z</li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+
+            // create pagination 
+            let pagination = new MadPaginationModule();
+            pagination.createPagination($('#list'), 'li');
+
+            // create search module which also works together with the pagination
+            let search = new MadSearchModule(); 
+            search.assignSearchFunctionForPagination($('#search'), pagination);
+
+        });
+    </script>
+
+</body>
+
+</html>
